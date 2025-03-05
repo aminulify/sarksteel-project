@@ -3,7 +3,7 @@ import imgStyle from '../public/logo/style-vector2.png';
 
 const WhyChooseUs = () => {
     return (
-        <div className="max-w-[1150px] mx-auto mb-20">
+        <div className="max-w-[1050px] mx-auto mb-20">
             
             {/* blur color 
             <div className="absolute md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[150px] bg-[var(--mainColor)] -z-10"></div> */}

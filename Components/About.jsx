@@ -6,10 +6,10 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const AboutUs = () => {
     return (
-        <div className="mt-10 max-w-[1150px] mx-auto">
+        <div className="mt-10 max-w-[1050px] mx-auto">
 
             {/* blur color  */}
-            <div className="absolute md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[150px] bg-[var(--mainColor)] -z-10"></div>
+            <div className="absolute md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[150px] bg-[var(--mainColor)] -z-10 "></div>
 
             {/* heading section  */}
             <div className="">
@@ -23,13 +23,13 @@ const AboutUs = () => {
 
             {/* main section */}
             {/* ************  */}
-            <section className="my-10 md:mx-24 mx-10 grid md:grid-cols-2 grid-cols-1 items-center">
+            <section className="my-10 mx-10 grid md:grid-cols-2 grid-cols-1 items-center">
                 <div className="mb-10 md:mb-0">
                     <Image src={img1} width={430}/>
                 </div>
                 <div>
                     <h1 className="leading-10 text-[secondaryColor] text-[30px] md:text-[35px] font-bold">A company involved in <span className="text-[var(--mainColor)]">service, maintenance</span></h1>
-                    <p className="text-[var(--textColor)] my-4 text-md md:text-lg">Led by a dedicated and visionary CEO, SARK Steel Building Company thrives on precision, trust, and excellence. He personally connects with each client, understands their needs, oversees every project, and ensures top-quality execution. His hands-on leadership guarantees customer satisfaction, making SARK a name synonymous with strength and reliability in steel construction.</p>
+                    <p className="text-[var(--textColor)] my-4 text-md md:text-lg text-justify">Led by a dedicated and visionary CEO, SARK Steel Building Company thrives on precision, trust, and excellence. He personally connects with each client, understands their needs, oversees every project, and ensures top-quality execution. His hands-on leadership guarantees customer satisfaction, making SARK a name synonymous with strength and reliability in steel construction.</p>
                     <div>
 
                     <p className="signature text-5xl md:text-6xl text-[var(--mainColor)]">Rajib</p>
