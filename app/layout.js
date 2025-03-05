@@ -2,6 +2,7 @@
 import { Allura, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
+import Footer from "@/Components/Footer";
 
 // Outfit font configuration with specific weights
 const outfit = Outfit({
@@ -27,8 +28,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${outfit.variable} ${allura.variable} antialiased`}>
-        <Navbar/>
+        {/* <Navbar/> */}
         {children}
+        <Footer />
       </body>
     </html>
   );

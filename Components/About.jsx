@@ -14,12 +14,12 @@ const AboutUs = () => {
             <section className="mt-10 max-w-[1050px] mx-auto">
                 {/* heading section  */}
             <div className="">
-                <div className="flex justify-center md:ml-30 ml-28 -z-10">
+                <div className="flex justify-center md:ml-30 ml-18 -z-10">
                     <Image src={imgStyle} width={85} className="absolute"/>
                 </div>
-                <h1 className="mt-7 text-[35px] md:text-[40px] text-center text-[var(--secondaryColor)]">About <span className="font-bold text-[var(--mainColor)]">Us</span></h1>
+                <h1 className="mt-7 text-[30px] md:text-[40px] text-center text-[var(--secondaryColor)]">About <span className="font-bold text-[var(--mainColor)]">Us</span></h1>
 
-                <div className="flex justify-center"><p className="mx-10 text-center text-[var(--textColor)] w-[700px] md:text-lg">SARK Steel specializes in manufacturing, supplying, and executing premium-quality steel structures tailored to diverse industrial needs.</p></div>
+                <div className="flex justify-center"><p className="mx-10 text-center text-[var(--textColor)] w-[700px] md:text-lg text-sm">SARK Steel specializes in manufacturing, supplying, and executing premium-quality steel structures tailored to diverse industrial needs.</p></div>
             </div> 
 
             {/* main section */}
@@ -29,7 +29,7 @@ const AboutUs = () => {
                     <Image src={img1} width={430}/>
                 </div>
                 <div>
-                    <h1 className="leading-10 text-[secondaryColor] text-[30px] md:text-[35px] font-bold">A company involved in <span className="text-[var(--mainColor)]">service, maintenance</span></h1>
+                    <h1 className="leading-10 text-[secondaryColor] text-[28px] md:text-[35px] font-bold">A company involved in <span className="text-[var(--mainColor)]">service, maintenance</span></h1>
                     <p className="text-[var(--textColor)] my-4 text-md md:text-lg text-justify">Led by a dedicated and visionary CEO, SARK Steel Building Company thrives on precision, trust, and excellence. He personally connects with each client, understands their needs, oversees every project, and ensures top-quality execution. His hands-on leadership guarantees customer satisfaction, making SARK a name synonymous with strength and reliability in steel construction.</p>
                     <div>
 

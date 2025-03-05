@@ -5,6 +5,7 @@ import Appointment from "@/Components/Appointment";
 import ExperienceWith from "@/Components/ExperienceWith";
 import OurServices from "@/Components/OurServices";
 import BestWishers from "@/Components/BestWishers";
+import Footer from "@/Components/Footer";
 
 export default function Home() {
   return (

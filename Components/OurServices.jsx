@@ -18,9 +18,9 @@ const OurServices = () => {
                 <div className="flex justify-center md:ml-30 ml-28 -z-10">
                     <Image src={imgStyle} alt="heading decoration image" width={85} className="absolute"/>
                 </div>
-                <h1 className="mt-7 text-[35px] md:text-[40px] text-center text-[var(--secondaryColor)]">Our <span className="font-bold text-[var(--mainColor)]">Services</span></h1>
+                <h1 className="mt-7 text-[30px] md:text-[40px] text-center text-[var(--secondaryColor)]">Our <span className="font-bold text-[var(--mainColor)]">Services</span></h1>
                 
-                <div className="flex justify-center"><p className="mx-10 text-center text-[var(--textColor)] w-[700px] md:text-lg">Delivering high-quality steel solutions with precision, reliability, and innovation to meet diverse industrial and commercial needs.</p></div>
+                <div className="flex justify-center"><p className="mx-10 text-center text-[var(--textColor)] w-[700px] md:text-lg text-sm">Delivering high-quality steel solutions with precision, reliability, and innovation to meet diverse industrial and commercial needs.</p></div>
             </header>
 
             <main className="max-w-[1050px] md:mx-auto mx-10 grid md:grid-cols-3 grid-cols-1 gap-5 services">
