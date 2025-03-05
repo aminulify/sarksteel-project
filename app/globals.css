@@ -1,24 +1,90 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body{
+  font-family: var(--font-outfit);
+  margin: 0;
+  padding: 0;
+}
+.signature{
+  font-family: var(--font-allura);
+}
+:root{
+  --mainColor: #074790;
+  --secondaryColor: #041E3C;
+  --textColor: #102c4b;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.headerImg{
+  background-image: url(../public/bg/section4.png);
+  height: 580px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media screen and (max-width: 800px) {
+  .headerImg{
+    height: 450px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.bgImgAppointment{
+  background-image: url('../public/bg/section5.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.logos{
+  display: flex;
+  position: relative;
+}
+.logos:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 100%;
+  z-index: 10;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white 100%);
+}
+.logos:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  z-index: 10;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white 100%);
+}
+
+.logo-slide img{
+  height: 100px;
+  width: 100%;
+  margin: 0 20px;
+}
+
+.logo-slide{
+  animation: 10s slide infinite linear;
+}
+@keyframes slide {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-140%);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logos:after, .logos:before{
+      width: 100px;
+
+  }
+  .logo-slide img{
+      height: 80px;
+      margin: 0 10px;
+  }
 }
