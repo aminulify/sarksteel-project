@@ -4,6 +4,7 @@ import WhyChooseUs from "@/Components/WhyChooseUs";
 import Appointment from "@/Components/Appointment";
 import ExperienceWith from "@/Components/ExperienceWith";
 import OurServices from "@/Components/OurServices";
+import BestWishers from "@/Components/BestWishers";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Appointment/>
       <ExperienceWith/>
       <OurServices/>
+      <BestWishers/>
     </div>
   );
 }

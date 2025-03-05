@@ -6,7 +6,7 @@ const WhyChooseUs = () => {
         <div className="max-w-[1050px] mx-auto mb-20">
             
             {/* blur color 
-            <div className="absolute md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[150px] bg-[var(--mainColor)] -z-10"></div> */}
+            <div className="absolute md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[200px] bg-[var(--mainColor)] -z-10"></div> */}
 
             {/* heading section  */}
             <div className="">

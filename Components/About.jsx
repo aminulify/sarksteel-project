@@ -6,12 +6,13 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const AboutUs = () => {
     return (
-        <div className="mt-10 max-w-[1050px] mx-auto">
+        <div className="max-w-[1250px] mx-auto">
 
             {/* blur color  */}
-            <div className="absolute md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[150px] bg-[var(--mainColor)] -z-10 "></div>
+            <div className="absolute md:w-[260px] md:h-[200px] w-[150px] h-[150px] blur-[200px] bg-[var(--mainColor)] -z-10 opacity-80"></div>
 
-            {/* heading section  */}
+            <section className="mt-10 max-w-[1050px] mx-auto">
+                {/* heading section  */}
             <div className="">
                 <div className="flex justify-center md:ml-30 ml-28 -z-10">
                     <Image src={imgStyle} width={85} className="absolute"/>
@@ -42,8 +43,11 @@ const AboutUs = () => {
 
             <div className="pb-10 flex justify-center items-center"><button className="flex items-center text-lg py-2 px-8 gap-1 hover:gap-3 duration-300 bg-[var(--mainColor)] text-white rounded-full cursor-pointer">About More <FaArrowRight/></button></div>
 
+            
+            </section>   
+
             {/* blur color  */}
-            <div className="absolute right-0 top-[1250px] md:top-[950px] md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[150px] bg-[var(--mainColor)] -z-10"></div>
+            <div className="absolute right-0 top-[1250px] md:top-[950px] md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[200px] bg-[var(--mainColor)] -z-10 opacity-80"></div>         
         </div>
     );
 };

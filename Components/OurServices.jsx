@@ -9,10 +9,10 @@ import icon6 from "../public/icons/6.png";
 
 const OurServices = () => {
     return (
-        <div>
+        <div className="max-w-[1250px] mx-auto">
 
             { /* blur color  */  }
-            <div className="absolute md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[150px] bg-[var(--mainColor)] -z-10 mt-26 "></div>
+            <div className="absolute md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[250px] bg-[var(--mainColor)] -z-10 mt-26 opacity-80"></div>
 
             <header className="mb-10">
                 <div className="flex justify-center md:ml-30 ml-28 -z-10">
@@ -57,7 +57,7 @@ const OurServices = () => {
             </main>
 
             { /* blur color  */  }
-            <div className="absolute md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[150px] bg-[var(--mainColor)] -z-10 right-0 -mt-24"></div>
+            <div className="absolute md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[250px] bg-[var(--mainColor)] -z-10 right-0 -mt-24 opacity-80"></div>
         </div>
     );
 };
