@@ -24,13 +24,13 @@ const Footer = () => {
                     <div className="">
                         <Image title="image" src={phone} width={35} alt="icon" />
                         <h2 className="text-xl font-semibold">Phone</h2>
-                        <p className="text-sm">01712500921</p>
+                        <p className="text-sm">01712-500-921</p>
                     </div>
                     
                     <div className="">
                         <Image title="image" src={website} width={35} alt="icon" />
                         <h2 className="text-xl font-semibold">Website</h2>
-                        <div>
+                        <div className="flex flex-col">
                             <p className="text-sm">steelsark@gmail.com</p>
                             <Link href={'/'} className="text-sm">www.sarkbd.com</Link>
                         </div>
@@ -75,7 +75,14 @@ const Footer = () => {
                 </section>
 
             </div>
-            <p className="py-1 md:text-sm text-[14px] bg-[var(--mainColor)] text-white text-center">&copy; Copyright 2025 All Rights Reserved - Sarkbd.com</p>
+
+            <footer className="bg-[var(--mainColor)] w-full">
+                <div className="md:max-w-[1050px] mx-auto py-1 md:text-sm text-[14px] text-white text-center flex md:flex-row flex-col justify-between">
+                    <p>&copy; Copyright 2025 All Rights Reserved - Sarkbd.com</p>
+                    <p>Web Designed & Developed By "Aminulify"</p>
+                </div>
+            </footer>
+
         </section>
     );
 };

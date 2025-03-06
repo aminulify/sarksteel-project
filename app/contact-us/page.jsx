@@ -19,7 +19,7 @@ const ContactUs = () => {
 
             <main className="md:max-w-[1250px] mx-auto">
                 {/* blur color  */}
-                <div className="absolute md:w-[260px] md:h-[200px] w-[150px] h-[150px] blur-[200px] bg-[var(--mainColor)] -z-10 opacity-80 -mt-20"></div>
+                <div className="absolute md:w-[300px] md:h-[300px] w-[200px] h-[200px] blur-[200px] bg-[var(--mainColor)] -z-10 opacity-60 -mt-20"></div>
 
                 <div className="md:grid md:grid-cols-3 md:max-w-[1050px] md:mx-auto mx-10 pt-16 md:gap-18">
                     <aside className="col-span-1">
@@ -61,20 +61,20 @@ const ContactUs = () => {
                         </div>
                     </aside>
 
-                    <aside className="col-span-2 p-8 rounded-xl md:rounded-3xl border-[1.5px] border-[var(--mainColor)] backdrop-blur-3xl md:mb-0 mb-16 md:mt-0 mt-10">
+                    <aside className="col-span-2 px-8 pt-6 pb-8 rounded-xl md:rounded-3xl border-[1.5px] border-[var(--mainColor)] backdrop-blur-3xl md:mb-0 mb-16 md:mt-0 mt-10">
                         <h2 className="text-2xl font-semibold text-[var(--mainColor)] mb-3">Send Message</h2>
 
                         <label className="text-lg text-[var(--mainColor)]">Name</label>
                         <input type="text" className="py-2 w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md" placeholder="Enter your name" />
 
                         <div className="my-3 md:flex gap-5 items-center">
-                            <div className="mb-3">
+                            <div className="mb-3 md:mb-0">
                                 <label className="text-lg text-[var(--mainColor)]">Email</label>
-                                <input type="email" className="py-2 w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md" placeholder="Enter your name"/>
+                                <input type="email" className="py-2 w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md" placeholder="example@gmail.com"/>
                             </div>
                             <div>
                                 <label className="text-lg text-[var(--mainColor)] md:mt-0">Contact</label>
-                                <input type="text" className="py-2 w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md" placeholder="Enter your name"/>
+                                <input type="text" className="py-2 w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md" placeholder="+880 XXXX- XXX-XXX"/>
                             </div>
                         </div>
 
@@ -88,7 +88,7 @@ const ContactUs = () => {
                 </div>
 
                     {/* blur color  */}
-                    <div className="absolute md:w-[260px] md:h-[200px] w-[150px] h-[150px] blur-[200px] bg-[var(--mainColor)] -z-10 opacity-80 right-0 -mt-20"></div>
+                    <div className="absolute md:w-[300px] md:h-[300px] w-[200px] h-[200px] blur-[200px] bg-[var(--mainColor)] -z-10 opacity-60 right-0 -mt-20"></div>
             </main>  
         </section>
     );
