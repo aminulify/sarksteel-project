@@ -11,7 +11,7 @@ const WhyChooseUs = () => {
             {/* heading section  */}
             <div className="">
                 <div className="flex justify-center -z-10">
-                    <Image src={imgStyle} width={300} className="absolute md:mt-[58px] mt-[48px] md:w-[300px] w-[250px]"/>
+                    <Image title="image" src={imgStyle} width={300} className="absolute md:mt-[58px] mt-[48px] md:w-[300px] w-[250px]"/>
                 </div>
                 <h1 className="mt-7 text-[30px] md:text-[40px] text-center text-[var(--secondaryColor)]">Why customer love to</h1>
                 <h1 className="-mt-2 text-[35px] md:text-[40px] text-center font-bold text-[var(--mainColor)]">Choose Us</h1>

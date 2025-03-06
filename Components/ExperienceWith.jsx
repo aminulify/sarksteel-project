@@ -9,25 +9,25 @@ const ExperienceWith = () => {
         <div className="py-8 md:mx-auto overflow-hidden">
 
             <div className="flex justify-center md:ml-54 ml-40 -z-10">
-                <Image src={imgStyle} alt="Stylist Heading Image" width={100} className="absolute"/>
+                <Image title="image" src={imgStyle} alt="Stylist Heading Image" width={100} className="absolute"/>
             </div>
             <h1 className="mt-8 text-[30px] md:text-[40px] text-center text-[var(--secondaryColor)]">Experience <span className="font-bold text-[var(--mainColor)]">With</span></h1>
 
             {/* logo infinite loading  */}
             <div className="logos md:my-4 my-2">
             <div className="flex items-center max-w-[1050px] gap-10 my-10 logo-slide mx-18">
-                <Image src={logo3} className="mix-blend-multiply" width={150} alt="logo image" />
-                <Image src={logo1} className="mix-blend-multiply" width={150} alt="logo image" />
-                <Image src={logo2} className="mix-blend-multiply" width={150} alt="logo image" />
-                <Image src={logo3} className="mix-blend-multiply" width={150} alt="logo image" />
-                <Image src={logo1} className="mix-blend-multiply" width={150} alt="logo image" />
-                <Image src={logo2} className="mix-blend-multiply" width={150} alt="logo image" />
-                <Image src={logo3} className="mix-blend-multiply" width={150} alt="logo image" />
-                <Image src={logo1} className="mix-blend-multiply" width={150} alt="logo image" />
-                <Image src={logo2} className="mix-blend-multiply" width={150} alt="logo image" />
-                <Image src={logo3} className="mix-blend-multiply" width={150} alt="logo image" />
-                <Image src={logo1} className="mix-blend-multiply" width={150} alt="logo image" />
-                <Image src={logo2} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo3} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo1} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo2} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo3} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo1} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo2} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo3} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo1} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo2} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo3} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo1} className="mix-blend-multiply" width={150} alt="logo image" />
+                <Image title="image" src={logo2} className="mix-blend-multiply" width={150} alt="logo image" />
                 
             </div>
             </div>

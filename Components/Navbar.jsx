@@ -11,15 +11,15 @@ const Navbar = () => {
             <div className="flex justify-between mx-auto items-center max-w-[1050px]">
             {/* left side  */}
                 <div>
-                    <Link href={"/"}><Image src={logo} height={60}/></Link>
+                    <Link href={"/"}><Image title="image" src={logo} height={60}/></Link>
                 </div>
                 {/* right side  */}
                 <div>
                     <div className='uppercase list-none flex gap-3 text-[var(--secondaryColor)]'>
                         <li className='py-2 px-4 cursor-pointer'><Link href={"/"}>Home</Link></li>
-                        <li className='py-2 px-4 flex items-center cursor-pointer serviceIcon'><Link href={"/"}>Services </Link><IoIosArrowDown className='icon'/></li>
-                        <li className='py-2 px-4 cursor-pointer'><Link href={"/"}>About</Link></li>
-                        <li className='py-2 px-4 cursor-pointer'><Link href={"/"}>Contact Us</Link></li>
+                        <li className='py-2 px-4 flex items-center cursor-pointer serviceIcon'><Link href={"/services"}>Services </Link><IoIosArrowDown className='icon'/></li>
+                        <li className='py-2 px-4 cursor-pointer'><Link href={"/about-us"}>About</Link></li>
+                        <li className='py-2 px-4 cursor-pointer'><Link href={"/contact-us"}>Contact Us</Link></li>
                     </div>
                 </div>
         </div>

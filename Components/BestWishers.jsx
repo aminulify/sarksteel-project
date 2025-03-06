@@ -24,7 +24,7 @@ const BestWishers = () => {
                             {/* heading section  */}
                         <div className="pt-4">
                             <div className="flex justify-center md:ml-30 ml-28 -z-10">
-                                <Image src={imgStyle} alt="heading style" width={85} className="absolute"/>
+                                <Image title="image" src={imgStyle} alt="heading style" width={85} className="absolute"/>
                             </div>
                             <h1 className="mt-7 text-[35px] md:text-[40px] text-center text-white">Best <span className="font-bold text-[var(--mainColor)]">Wishers</span></h1>
             

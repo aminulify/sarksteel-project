@@ -2,6 +2,7 @@ import Image from "next/image";
 import imgStyle from "../public/logo/heading-style.png";
 import img1 from "../public/imgs/1.png";
 import { FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 
 const AboutUs = () => {
@@ -15,7 +16,7 @@ const AboutUs = () => {
                 {/* heading section  */}
             <div className="">
                 <div className="flex justify-center md:ml-30 ml-18 -z-10">
-                    <Image src={imgStyle} width={85} className="absolute"/>
+                    <Image title="image" src={imgStyle} width={85} className="absolute"/>
                 </div>
                 <h1 className="mt-7 text-[30px] md:text-[40px] text-center text-[var(--secondaryColor)]">About <span className="font-bold text-[var(--mainColor)]">Us</span></h1>
 
@@ -26,7 +27,7 @@ const AboutUs = () => {
             {/* ************  */}
             <section className="my-10 mx-10 grid md:grid-cols-2 grid-cols-1 items-center">
                 <div className="mb-10 md:mb-0">
-                    <Image src={img1} width={430}/>
+                    <Image title="image" src={img1} width={430}/>
                 </div>
                 <div>
                     <h1 className="leading-10 text-[secondaryColor] text-[28px] md:text-[35px] font-bold">A company involved in <span className="text-[var(--mainColor)]">service, maintenance</span></h1>
@@ -41,7 +42,7 @@ const AboutUs = () => {
             
             </section>
 
-            <div className="pb-10 flex justify-center items-center"><button className="flex items-center text-lg py-2 px-8 gap-1 hover:gap-3 duration-300 bg-[var(--mainColor)] text-white rounded-full cursor-pointer">About More <FaArrowRight/></button></div>
+            <div className="pb-10 flex justify-center items-center"><Link href={'about-us'} className="flex items-center text-lg py-2 px-8 gap-1 hover:gap-3 duration-300 bg-[var(--mainColor)] text-white rounded-full cursor-pointer">About More <FaArrowRight/></Link></div>
 
             
             </section>   

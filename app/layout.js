@@ -19,7 +19,7 @@ const allura = Allura({
 });
 
 export const metadata = {
-  title: "SarkSteel । Home",
+  title: "Sarkbd । Home",
   description: "Make your dreams come true with Sarkbd.",
 };
 

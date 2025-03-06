@@ -136,3 +136,37 @@ body{
   height: 100%;
   object-fit: cover;
 }
+
+
+/* about  */
+/* about  */
+/* about  */
+.about-heading-img{
+  background-image: url('../public/bg/section3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+/* services  */
+/* services  */
+/* services  */
+.service-heading-img{
+  background-image: url('../public/bg/section1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+/* contact  */
+/* contact  */
+/* contact  */
+.contact-heading-img{
+  background-image: url('../public/bg/section2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
