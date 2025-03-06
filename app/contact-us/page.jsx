@@ -2,7 +2,7 @@ import Image from "next/image";
 import icon1 from "../../public/icons/contact-icon/phone-call.png";
 import icon2 from "../../public/icons/contact-icon/website.png";
 import icon3 from "../../public/icons/contact-icon/map.png";
-import { FiSend } from "react-icons/fi";
+import { BsSend } from "react-icons/bs";
 
 export const metadata = {
     title: "SarkSteel । Contact Us"
@@ -23,7 +23,7 @@ const ContactUs = () => {
 
                 <div className="md:grid md:grid-cols-3 md:max-w-[1050px] md:mx-auto mx-10 pt-16 md:gap-18">
                     <aside className="col-span-1">
-                        <p className="p-1 rounded-full text-[var(--mainColor)] border-[1.5px] w-[120px] flex justify-center text-sm font-medium">Contact Us</p>
+                        <p className="p-1 rounded-full text-[var(--mainColor)] border-[1.5px] w-[120px] flex justify-center text-sm font-semibold">Contact Us</p>
                         <h2 className="text-[32px] md:text-[40px] font-bold mt-1 text-[var(--textColor)]">Get In <span className="text-[var(--mainColor)]">Touch</span></h2>
                         <p className="text-[var(--secondaryColor)]">We’re here to assist you! Please reach out with any questions, feedback, or project inquiries.</p>
 
@@ -83,7 +83,7 @@ const ContactUs = () => {
                             <textarea name="message" rows={5} className="w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md py-1" placeholder="Message write here..."></textarea>
                         </div>
 
-                        <button className="py-3 px-6 text-white bg-[var(--mainColor)] mt-6 rounded-md flex items-center gap-1 hover:gap-2 duration-300 cursor-pointer hover:bg-[var(--secondaryColor)]">Send Message <FiSend/></button>
+                        <button className="py-3 px-6 text-white bg-[var(--mainColor)] mt-6 rounded-md flex items-center gap-1 hover:gap-2 duration-300 cursor-pointer hover:bg-[var(--secondaryColor)]">Send Message <BsSend className="text-lg"/></button>
                     </aside>
                 </div>
 

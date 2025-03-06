@@ -10,13 +10,13 @@ const AboutUs = () => {
         <div className="max-w-[1250px] mx-auto">
 
             {/* blur color  */}
-            <div className="absolute md:w-[260px] md:h-[200px] w-[150px] h-[150px] blur-[200px] bg-[var(--mainColor)] -z-10 opacity-80"></div>
+            <div className="absolute md:w-[300px] md:h-[300px] w-[150px] h-[150px] blur-[200px] bg-[var(--mainColor)] -z-10 opacity-60"></div>
 
             <section className="mt-10 max-w-[1050px] mx-auto">
                 {/* heading section  */}
             <div className="">
                 <div className="flex justify-center md:ml-30 ml-18 -z-10">
-                    <Image title="image" src={imgStyle} width={85} className="absolute"/>
+                    <Image alt="image" title="image" src={imgStyle} width={85} className="absolute"/>
                 </div>
                 <h1 className="mt-7 text-[30px] md:text-[40px] text-center text-[var(--secondaryColor)]">About <span className="font-bold text-[var(--mainColor)]">Us</span></h1>
 
@@ -27,7 +27,7 @@ const AboutUs = () => {
             {/* ************  */}
             <section className="my-10 mx-10 grid md:grid-cols-2 grid-cols-1 items-center">
                 <div className="mb-10 md:mb-0">
-                    <Image title="image" src={img1} width={430}/>
+                    <Image alt="image" title="image" src={img1} width={430}/>
                 </div>
                 <div>
                     <h1 className="leading-10 text-[secondaryColor] text-[28px] md:text-[35px] font-bold">A company involved in <span className="text-[var(--mainColor)]">service, maintenance</span></h1>
@@ -48,7 +48,7 @@ const AboutUs = () => {
             </section>   
 
             {/* blur color  */}
-            <div className="absolute right-0 top-[1250px] md:top-[950px] md:w-[200px] md:h-[200px] w-[150px] h-[150px] blur-[200px] bg-[var(--mainColor)] -z-10 opacity-80"></div>         
+            <div className="absolute right-0 top-[1250px] md:top-[1160px] md:w-[300px] md:h-[300px] w-[150px] h-[150px] blur-[200px] bg-[var(--mainColor)] -z-10 opacity-60"></div>         
         </div>
     );
 };

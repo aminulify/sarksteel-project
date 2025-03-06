@@ -43,7 +43,7 @@ const Footer = () => {
                 <section className="md:max-w-[1050px] md:mx-auto mx-10 text-white">
                     <div className="md:pt-28 pt-10 flex flex-col md:flex-row  justify-between">
                         <div className="md:w-[300px]">
-                            <Image title="image" src={logoWhite} alt="logo white color" width={100} />
+                            <Link href={"/"}><Image title="image" src={logoWhite} alt="logo white color" width={100} /></Link>
                             <p className="mt-4 text-sm">Reliable, durable, and innovative steel solutions ensuring long-term partnerships, quality, and industry-leading expertise.</p>
                         </div>
                         <div>

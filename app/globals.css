@@ -170,3 +170,15 @@ body{
   background-position: center;
   height: 400px;
 }
+
+/* why choose us  */
+/* why choose us  */
+/* why choose us  */
+.whyChooseUsSection{
+  background-color: rgba(255, 255, 255, 0.189);
+  backdrop-filter: blur(100px);
+}
+.whyChooseUsSection img{
+  border-radius: 3px;
+  margin-bottom: 10px;
+}

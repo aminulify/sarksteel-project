@@ -94,7 +94,7 @@ const BestWishers = () => {
         </div>
 
         {/* blur color  */}
-        <div className="absolute -mt-[230px] md:w-[300px] md:h-[300px] w-[250px] h-[250px] blur-[250px] bg-[var(--mainColor)] -z-10 opacity-80"></div>
+        <div className="absolute -mt-[230px] md:w-[300px] md:h-[300px] w-[250px] h-[250px] blur-[250px] bg-[var(--mainColor)] -z-10 opacity-80 right-0"></div>
         </div>
     );
 };
