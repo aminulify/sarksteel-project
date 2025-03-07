@@ -1,9 +1,12 @@
+'use client'
 import Link from "next/link";
 import { BsFiletypePdf } from "react-icons/bs";
 import icon1 from "../../public/icons/contact-icon/phone-call.png";
 import icon2 from "../../public/icons/contact-icon/website.png";
 import icon3 from "../../public/icons/contact-icon/map.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+// import { useRouter } from "next/router";
 
 // export const metadata = {
 //     title: "Sarkbd । Services",
@@ -11,6 +14,9 @@ import Image from "next/image";
 // }
 
 export default function Services({children}){
+    const router = useRouter();
+    
+    console.log("data const",router);
     return(
         <header className="">
            
