@@ -48,7 +48,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <h2 className="font-semibold text-xl md:mt-0 mt-5">Navbar</h2>
-                            <div className="flex flex-col pt-1">
+                            <div className="flex flex-col pt-1 w-[80px]">
                                 <Link className="underline" href={'about-us'}>About Us</Link>
                                 <Link className="underline" href={'services'}>Services</Link>
                                 <Link className="underline" href={'contact-us'}>Contact Us</Link>
@@ -56,11 +56,11 @@ const Footer = () => {
                         </div>
                         <div>
                             <h2 className="font-semibold text-xl md:mt-0 mt-5">Services</h2>
-                            <div className="flex flex-col pt-1">
-                                <Link href={'service-consultancy'}>Consultancy</Link>
-                                <Link href={'service-steel-building-supply'}>Steel Building</Link>
-                                <Link href={'service-rcc-work'}>Rcc Work</Link>
-                                <Link href={'service-interior-design'}>Interior Design</Link>
+                            <div className="flex flex-col pt-1 w-[120px]">
+                                <Link className="hover:underline" href={'services'}>Consultancy</Link>
+                                <Link className="hover:underline" href={'services'}>Steel Building</Link>
+                                <Link className="hover:underline" href={'services'}>Rcc Work</Link>
+                                <Link className="hover:underline" href={'services'}>Interior Design</Link>
                             </div>
                         </div>
                         <div>
