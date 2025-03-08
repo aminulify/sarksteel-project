@@ -5,7 +5,8 @@ import icon1 from "../../public/icons/contact-icon/phone-call.png";
 import icon2 from "../../public/icons/contact-icon/website.png";
 import icon3 from "../../public/icons/contact-icon/map.png";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
+import ServicesBottomPart from "@/Components/ServicesBottomPart";
 // import { useRouter } from "next/router";
 
 // export const metadata = {
@@ -14,20 +15,26 @@ import { useRouter } from "next/navigation";
 // }
 
 export default function Services({children}){
-    const router = useRouter();
+    const params = useParams();
+    const { serviceId } = params;
+    console.log("id",serviceId);
     
-    console.log("data const",router);
     return(
         <header className="">
+
+            {/* blur color  */}
+            <div className="absolute md:w-[300px] md:h-[300px] w-[200px] h-[200px] top-[300px] blur-[200px] bg-[var(--mainColor)] -z-10 md:opacity-60 opacity-40 right-0"></div>
+            {/* blur color  */}
+            <div className="absolute md:w-[300px] md:h-[300px] w-[200px] h-[200px] top-[1200px] blur-[200px] bg-[var(--mainColor)] -z-10 md:opacity-60 opacity-40"></div>
            
             <div className='service-heading-img flex items-center justify-center text-center' title="our services image">
-                <div className="grid place-items-center mt-8">
+                <div className="grid place-items-center md:mt-8 mt-18">
                 <h1 className="text-[32px] md:text-[42px] font-black text-white mx-10">Our Services</h1>
                 <p className="md:w-[500px] mx-12 text-center text-white md:text-xl">We have strong and experienced team member. We are ready to build your dream.</p>
                 </div>
             </div>
 
-            <main className="my-10 md:grid md:grid-cols-3 gap-10 md:max-w-[1050px] md:mx-auto mx-10">
+            <main className="my-10 md:grid md:grid-cols-3 gap-14 md:max-w-[1050px] md:mx-auto mx-10">
                     {/* left side  */}
                     <aside className="col-span-1">
                         <section className="px-8 pt-5 pb-8 bg-slate-100 rounded-lg border-[1.5px] border-slate-200 m-[1.5px]">
@@ -87,10 +94,14 @@ export default function Services({children}){
                     </aside>
 
                     {/* right side  */}
-                    <aside className="col-span-2">
+                    <aside className="col-span-2 md:ml-10 md:mt-0 mt-5">
                         {children}
+                        <ServicesBottomPart/>
                     </aside>
                 </main>
+
+                {/* blur color  */}
+            <div className="absolute md:w-[300px] md:h-[300px] w-[200px] h-[200px] blur-[200px] bg-[var(--mainColor)] md:top-[2000px] top-[2300px] right-0 -z-10 md:opacity-60 opacity-40"></div>
             
         </header>
     )

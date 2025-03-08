@@ -11,13 +11,16 @@ const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const handleScrollTop = () =>{
+        window.scrollTo(0,0);
+    }
     return ( 
         <div className='fixed w-full z-10'>
             <header className='backdrop-blur-2xl bg-[#ffffffa4] py-3'>
             <div className="flex justify-between md:mx-auto items-center md:max-w-[1050px] mx-10">
             {/* left side  */}
                 <div>
-                    <Link href={"/"}><Image title="image" src={logo} height={60}/></Link>
+                    <Link href={"/"}><Image title="image" src={logo} height={60} alt='image'/></Link>
                 </div>
 
                 {/* mobile button  */}
@@ -25,20 +28,20 @@ const Navbar = () => {
                     className="lg:hidden text-2xl text-gray-80 cursor-pointer text-[var(--secondaryColor)] duration-300"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
-                    {isMenuOpen ? <FiX /> : <FiMenu />}
+                    {isMenuOpen ? <FiX className='text-3xl'/> : <FiMenu className='text-3xl'/>}
                 </button>
 
                 {/* right side  */}
                 <div className='md:block lg:block hidden'>
                     <div className='uppercase list-none flex gap-3 text-[var(--secondaryColor)]'>
-                        <li className='py-2 px-4 cursor-pointer hover:underline'><Link href={"/"}>Home</Link></li>
+                        <li className='py-2 px-4 cursor-pointer hover:underline' onClick={handleScrollTop}><Link href={"/"}>Home</Link></li>
                         
                         {/* Services with Dropdown */}
                         <li
                         className="relative py-2 px-4 flex items-center cursor-pointer hover:underline"
                         onMouseEnter={() => setIsDropdownOpen(true)}
                         onMouseLeave={() => setIsDropdownOpen(false)}
-                        >
+                         onClick={handleScrollTop}>
                         <Link href="/services/consultancy">Services</Link>
                         <IoIosArrowDown className="ml-1" />
 
@@ -53,7 +56,7 @@ const Navbar = () => {
                                 { name: "RCC Work", link: "/services/rcc-work" },
                                 { name: "Interior Design", link: "/services/interior-design" },
                             ].map((service, index) => (
-                                <li key={index} className="px-4 py-2 hover:bg-[var(--mainColor)] duration-300 rounded-md hover:text-white">
+                                <li key={index} className="px-4 py-2 hover:bg-[var(--mainColor)] duration-300 rounded-md hover:text-white" onClick={handleScrollTop}>
                                 <Link href={service.link}>{service.name}</Link>
                                 </li>
                             ))}
@@ -61,8 +64,8 @@ const Navbar = () => {
                         )}
                         </li>
 
-                        <li className='py-2 px-4 cursor-pointer hover:underline'><Link href={"/about-us"}>About</Link></li>
-                        <li className='py-2 px-4 cursor-pointer hover:underline'><Link href={"/contact-us"}>Contact Us</Link></li>
+                        <li className='py-2 px-4 cursor-pointer hover:underline'><Link href={"/about-us"} onClick={handleScrollTop}>About</Link></li>
+                        <li className='py-2 px-4 cursor-pointer hover:underline' onClick={handleScrollTop}><Link href={"/contact-us"}>Contact Us</Link></li>
                     </div>
                 </div>
 
@@ -71,14 +74,14 @@ const Navbar = () => {
                     {isMenuOpen && (
                         <div className="lg:hidden md:hidden bg-white border-gray-200 fixed top-[85px] left-0 w-full">
                         <ul className="flex flex-col gap-3 py-4 px-6 text-gray-700">
-                            <li className="hover:bg-[var(--mainColor)] duration-300 py-2 w-full px-4 hover:text-white rounded-md cursor-pointer">
-                            <Link href="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-                            </li>
+                            <Link href="/" className="hover:bg-[var(--mainColor)] duration-300 py-2 w-full px-4 hover:text-white rounded-md cursor-pointer">
+                            <li onClick={() => setIsMenuOpen(false)}>Home</li>
+                            </Link>
 
                             {/* Services Dropdown for Mobile */}
                             <li className="hover:bg-[var(--mainColor)] duration-300 py-2 w-full px-4 hover:text-white rounded-md cursor-pointer">
                             <button
-                                className="flex items-center justify-between w-full"
+                                className="flex items-center justify-between w-full cursor-pointer"
                                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                             >
                                 Services <IoIosArrowDown />
@@ -87,29 +90,29 @@ const Navbar = () => {
                                 <ul className="bg-[var(--mainColor)] text-white rounded-md cursor-pointer">
                                 {[
                                     { name: "Consultancy", link: "/services/consultancy" },
-                                    { name: "Steel Building Supply", link: "/services/steel-building" },
+                                    { name: "Steel Building Supply", link: "/services/steel-building-supply" },
                                     { name: "Fabrication", link: "/services/fabrication" },
                                     { name: "Erection", link: "/services/erection" },
                                     { name: "RCC Work", link: "/services/rcc-work" },
                                     { name: "Interior Design", link: "/services/interior-design" },
                                 ].map((service, index) => (
-                                    <li key={index} className="py-2 hover:bg-white duration-300 w-full px-4 hover:text-[var(--mainColor)] rounded-md">
-                                    <Link href={service.link} onClick={() => setIsMenuOpen(false)}>
+                                    <Link onClick={handleScrollTop} href={service.link} key={index} >
+                                    <li className="hover:bg-white duration-300 py-2 w-full px-4 hover:text-[var(--mainColor)] rounded-md cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                                         {service.name}
-                                    </Link>
                                     </li>
+                                    </Link>
                                 ))}
                                 </ul>
                             )}
                             </li>
 
-                            <li className="hover:bg-[var(--mainColor)] duration-300 py-2 w-full px-4 hover:text-white rounded-md cursor-pointer">
-                            <Link href="/about-us" onClick={() => setIsMenuOpen(false)}>About</Link>
-                            </li>
+                            <Link href="/about-us" className="hover:bg-[var(--mainColor)] duration-300 py-2 w-full px-4 hover:text-white rounded-md cursor-pointer">
+                            <li onClick={() => setIsMenuOpen(false)}>About</li>
+                            </Link>
 
-                            <li className="hover:bg-[var(--mainColor)] duration-300 py-2 w-full px-4 hover:text-white rounded-md cursor-pointer">
-                            <Link href="/contact-us" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
-                            </li>
+                            <Link href="/contact-us" className="hover:bg-[var(--mainColor)] duration-300 py-2 w-full px-4 hover:text-white rounded-md cursor-pointer">
+                            <li onClick={() => setIsMenuOpen(false)}>Contact Us</li>
+                            </Link>
                         </ul>
                         </div>
                     )}
