@@ -5,7 +5,7 @@ import icon3 from "../../public/icons/contact-icon/map.png";
 import { BsSend } from "react-icons/bs";
 
 export const metadata = {
-    title: "SarkSteel । Contact Us"
+    title: "Sarkbd । Contact Us"
 }
 const ContactUs = () => {
     return (

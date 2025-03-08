@@ -1,7 +1,12 @@
- import Image from "next/image";
+
+import Image from "next/image";
 import img1 from "../../../public/imgs/6.png";
  import serviceImg from "../../../public/service-img/img6.png";
  import { BsArrowRightCircle } from "react-icons/bs";
+
+ export const metadata = {
+    title: "Sarkbd । Services"
+  };
 
 const Consultancy = () => {
     

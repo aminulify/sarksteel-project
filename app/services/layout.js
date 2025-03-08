@@ -5,9 +5,8 @@ import icon1 from "../../public/icons/contact-icon/phone-call.png";
 import icon2 from "../../public/icons/contact-icon/website.png";
 import icon3 from "../../public/icons/contact-icon/map.png";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import ServicesBottomPart from "@/Components/ServicesBottomPart";
-// import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 // export const metadata = {
 //     title: "Sarkbd । Services",
@@ -15,9 +14,16 @@ import ServicesBottomPart from "@/Components/ServicesBottomPart";
 // }
 
 export default function Services({children}){
-    const params = useParams();
-    const { serviceId } = params;
-    console.log("id",serviceId);
+    const activeService = usePathname();
+
+    const services = [
+        { name: "Consultancy", path: "consultancy" },
+        { name: "Steel Building Supply", path: "steel-building-supply" },
+        { name: "Fabrication", path: "fabrication" },
+        { name: "Erection", path: "erection" },
+        { name: "Rcc Work", path: "rcc-work" },
+        { name: "Interior Design", path: "interior-design" },
+      ];
     
     return(
         <header className="">
@@ -41,12 +47,19 @@ export default function Services({children}){
                             <h2 className="text-[32px] font-bold text-[var(--mainColor)] text-center">Services</h2>
                             
                             <div className="mt-5 flex flex-col gap-2">
-                                <Link href={'/services/consultancy'}><p className="px-4 py-2 w-full bg-[var(--mainColor)] text-white rounded-md hover:bg-[var(--mainColor)] hover:text-white duration-300">Consultancy</p></Link>
-                                <Link className=" w-full bg-white" href={'/services/steel-building-supply'}><p className="px-4 py-2 w-full bg-white rounded-md hover:bg-[var(--mainColor)] hover:text-white duration-300">Steel Building Supply</p></Link>
-                                <Link className=" w-full bg-white" href={'/services/fabrication'}><p className="px-4 py-2 w-full bg-white rounded-md hover:bg-[var(--mainColor)] hover:text-white duration-300">Fabrication</p></Link>
-                                <Link className=" w-full bg-white" href={'/services/erection'}><p className="px-4 py-2 w-full bg-white rounded-md hover:bg-[var(--mainColor)] hover:text-white duration-300">Erection</p></Link>
-                                <Link className=" w-full bg-white" href={'/services/rcc-work'}><p className="px-4 py-2 w-full bg-white rounded-md hover:bg-[var(--mainColor)] hover:text-white duration-300">Rcc Work</p></Link>
-                                <Link className=" w-full bg-white" href={'/services/interior-design'}><p className="px-4 py-2 w-full bg-white rounded-md hover:bg-[var(--mainColor)] hover:text-white duration-300">Interior Design</p></Link>
+                                {services.map((service) => (
+                                    <Link key={service.path} href={`/services/${service.path}`}>
+                                        <p
+                                        className={`px-4 py-2 w-full rounded-md duration-300 ${
+                                            activeService === "/services/"+service.path
+                                            ? "bg-[var(--mainColor)] text-white"
+                                            : "bg-white hover:bg-[var(--mainColor)] hover:text-white"
+                                        }`}
+                                        >
+                                        {service.name}
+                                        </p>
+                                    </Link>
+                                ))}
                             </div>
                         </section>
 

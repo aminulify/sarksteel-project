@@ -3,6 +3,10 @@
  import serviceImg from "../../../public/service-img/img1.png";
  import { BsArrowRightCircle } from "react-icons/bs";
 
+ export const metadata = {
+    title: "Sarkbd । Services"
+  };
+
 const InteriorDesign = () => {
     
     return (

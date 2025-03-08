@@ -2,6 +2,10 @@
  import img1 from "../../../public/imgs/8.png";
  import serviceImg from "../../../public/service-img/img2.png";
  import { BsArrowRightCircle } from "react-icons/bs";
+ 
+ export const metadata = {
+    title: "Sarkbd । Services"
+  };
 
 const Erection = () => {
     
