@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 const Appointment = () => {
@@ -8,7 +9,7 @@ const Appointment = () => {
                 maintenance</h1>
                 <div className="flex md:flex-row flex-col justify-between md:gap-5 gap-4 md:max-w-[700px] mx-10 items-center">
                     <p className="md:text-[30px] text-[25px] text-white">01712-500-921</p>
-                    <button className="flex gap-1 text-md md:text-xl items-center text-white py-3 px-8 border-2 border-white rounded-full duration-300 hover:gap-3 hover:backdrop-blur-md cursor-pointer">Get Appointment <FaArrowRight/></button>
+                    <Link target="_blank" href={'https://meetings-na2.hubspot.com/rajibul-islam'} className="flex gap-1 text-md md:text-xl items-center text-white py-3 px-8 border-2 border-white rounded-full duration-300 hover:gap-3 hover:backdrop-blur-md cursor-pointer">Get Appointment <FaArrowRight/></Link>
                 </div>
                 
             </div>

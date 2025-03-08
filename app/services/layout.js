@@ -8,11 +8,6 @@ import Image from "next/image";
 import ServicesBottomPart from "@/Components/ServicesBottomPart";
 import { usePathname } from "next/navigation";
 
-// export const metadata = {
-//     title: "Sarkbd । Services",
-//     description: "Sarkbd company services consultancy, steel building, rcc work, interior.",
-// }
-
 export default function Services({children}){
     const activeService = usePathname();
 
@@ -63,7 +58,8 @@ export default function Services({children}){
                             </div>
                         </section>
 
-                        <Link href={'/'} className="flex items-center gap-1 text-lg py-3 w-full justify-center md:mt-10 mt-6  rounded-lg text-[var(--mainColor)] border-[1.5px] border-[var(--mainColor)] m-[1.5px] hover:border-black hover:text-black duration-300"><BsFiletypePdf className="text-2xl"/> Download Our Brochure</Link>
+                        <Link target="_blank" href="/sarkbd.pdf" download className="flex items-center gap-1 text-lg py-3 w-full justify-center md:mt-10 mt-6 rounded-lg text-[var(--mainColor)] border-[1.5px] border-[var(--mainColor)] m-[1.5px] hover:border-black hover:text-black duration-300"><BsFiletypePdf className="text-2xl" /> Download Our Brochure
+                        </Link>
 
 
                         <section className="mt-5 md:block hidden">

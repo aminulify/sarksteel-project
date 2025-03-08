@@ -1,15 +1,44 @@
+'use client';
+
 import Image from "next/image";
 import icon1 from "../../public/icons/contact-icon/phone-call.png";
 import icon2 from "../../public/icons/contact-icon/website.png";
 import icon3 from "../../public/icons/contact-icon/map.png";
 import { BsSend } from "react-icons/bs";
+import { useRef } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import emailjs from '@emailjs/browser';
 
-export const metadata = {
-    title: "Sarkbd । Contact Us"
-}
+
 const ContactUs = () => {
+    const form = useRef();
+    
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+
+        console.log(form.current.name);
+
+        emailjs
+      .sendForm('service_ybtvd04', 'template_t4yhkg6', form.current, {
+        publicKey: 'J33IvVS5OC2vqRLn1',
+      })
+      .then(
+        () => {
+            e.target.reset();
+            // console.log('done');
+            toast.success('Message Send Successfully');  
+
+        },
+        (error) => {
+            // console.log(error);
+            toast.error('Something went wrong!');  
+        },
+      );
+    }
     return (
         <section>
+            <Toaster />
+
             <div className='contact-heading-img flex items-center justify-center text-center' title="contact us image">
             <div className="grid place-items-center md:mt-8 mt-18">
             <h1 className="text-[32px] md:text-[42px] font-black text-white mx-10">Contact Us</h1>
@@ -61,20 +90,20 @@ const ContactUs = () => {
                         </div>
                     </aside>
 
-                    <aside className="col-span-2 px-8 pt-6 pb-8 rounded-xl md:rounded-3xl border-[1.5px] border-[var(--mainColor)] backdrop-blur-3xl md:mb-0 mb-16 md:mt-0 mt-10">
+                    <form onSubmit={handleSubmit} ref={form} className="col-span-2 px-8 pt-6 pb-8 rounded-xl md:rounded-3xl border-[1.5px] border-[var(--mainColor)] backdrop-blur-3xl md:mb-0 mb-16 md:mt-0 mt-10">
                         <h2 className="text-2xl font-semibold text-[var(--mainColor)] mb-3">Send Message</h2>
 
                         <label className="text-lg text-[var(--mainColor)]">Name</label>
-                        <input type="text" className="py-2 w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md" placeholder="Enter your name" />
+                        <input name="name" type="text" className="py-2 w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md" placeholder="Enter your name" />
 
                         <div className="my-3 md:flex gap-5 items-center">
                             <div className="mb-3 md:mb-0">
                                 <label className="text-lg text-[var(--mainColor)]">Email</label>
-                                <input type="email" className="py-2 w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md" placeholder="example@gmail.com"/>
+                                <input name="email" type="email" className="py-2 w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md" placeholder="example@gmail.com"/>
                             </div>
                             <div>
                                 <label className="text-lg text-[var(--mainColor)] md:mt-0">Contact</label>
-                                <input type="text" className="py-2 w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md" placeholder="+880 XXXX- XXX-XXX"/>
+                                <input name="contact" type="text" className="py-2 w-full border-[1.5px] border-[var(--mainColor)] px-2 rounded-md" placeholder="+880 XXXX- XXX-XXX"/>
                             </div>
                         </div>
 
@@ -84,7 +113,7 @@ const ContactUs = () => {
                         </div>
 
                         <button className="py-3 px-6 text-white bg-[var(--mainColor)] mt-6 rounded-md flex items-center gap-1 hover:gap-2 duration-300 cursor-pointer hover:bg-[var(--secondaryColor)]">Send Message <BsSend className="text-lg"/></button>
-                    </aside>
+                    </form>
                 </div>
 
                     {/* blur color  */}
